@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PessoaTelefone" directorySegmentName="seg_0" id="B5732FC9-F198-753A-B772-271A77360EF1">
+<createdBy>rhmur</createdBy>
+<createdTime>2022-03-28 22:47:03 UTC</createdTime>
+<ownerDesignName>BancoDeDadosModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="62E998E5-3AEA-F7AF-E212-D3B59E9CF759" value="true"/>
+</engineerTo>
+<sourcePk>EE1A8DEA-7764-09EF-C2EC-697F6C056D28</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>7B7C2DCD-1C9C-8451-0F1D-635CDCE193C4</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>8275A24B-533B-8D00-A424-A195068A3184</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PessoaLogin" directorySegmentName="seg_0" id="B719EDC1-D45A-57FD-8B09-869F33558B44">
+<createdBy>rhmur</createdBy>
+<createdTime>2022-03-28 22:52:47 UTC</createdTime>
+<ownerDesignName>BancoDeDadosModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="62E998E5-3AEA-F7AF-E212-D3B59E9CF759" value="true"/>
+</engineerTo>
+<sourcePk>EE1A8DEA-7764-09EF-C2EC-697F6C056D28</sourcePk>
+<targetPk>B9A7C1FD-3E9D-71FD-94E8-E0B47180F61D</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>7B7C2DCD-1C9C-8451-0F1D-635CDCE193C4</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>7CED693F-3946-E7CD-F51A-EA00903C2270</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

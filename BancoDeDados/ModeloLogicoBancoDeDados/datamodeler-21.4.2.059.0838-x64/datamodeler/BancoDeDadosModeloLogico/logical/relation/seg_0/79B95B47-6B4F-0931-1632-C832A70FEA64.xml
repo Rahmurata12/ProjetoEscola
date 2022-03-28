@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="MateriaDiciplina" directorySegmentName="seg_0" id="79B95B47-6B4F-0931-1632-C832A70FEA64">
+<createdBy>rhmur</createdBy>
+<createdTime>2022-03-28 23:03:34 UTC</createdTime>
+<ownerDesignName>BancoDeDadosModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="62E998E5-3AEA-F7AF-E212-D3B59E9CF759" value="true"/>
+</engineerTo>
+<sourcePk>F8D42627-63B3-BF4A-C4D5-76BA48C03B6E</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>94A72CDD-1801-8D2D-0008-F3580477F398</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>A5B9619C-703D-7672-98EA-1031336A9309</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="BancoDeDadosModeloLogico" id="FEE1E72F-AF75-CD84-C660-57CB6603AD45" version="3.5">
+<createdBy>rhmur</createdBy>
+<createdTime>2022-03-28 22:38:41 UTC</createdTime>
+<ownerDesignName>BancoDeDadosModeloLogico</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>FEE1E72F-AF75-CD84-C660-57CB6603AD45</designId>
+</OSDM_Design>

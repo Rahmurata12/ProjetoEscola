@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A5B9619C-703D-7672-98EA-1031336A9309" name="Diciplina">
+<createdBy>rhmur</createdBy>
+<createdTime>2022-03-28 23:02:48 UTC</createdTime>
+<ownerDesignName>BancoDeDadosModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="62E998E5-3AEA-F7AF-E212-D3B59E9CF759" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Materia" id="D3B859D0-A5FD-857B-0A83-866ABEBB6FB9">
+<createdBy>rhmur</createdBy>
+<createdTime>2022-03-28 23:02:57 UTC</createdTime>
+<ownerDesignName>BancoDeDadosModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="62E998E5-3AEA-F7AF-E212-D3B59E9CF759" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="QtdeAulas" id="167D3561-D746-39C3-8A90-5DE0D996EE92">
+<createdBy>rhmur</createdBy>
+<createdTime>2022-03-28 23:03:12 UTC</createdTime>
+<ownerDesignName>BancoDeDadosModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="62E998E5-3AEA-F7AF-E212-D3B59E9CF759" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>40</dataTypePrecision>
+<ownDataTypeParameters>,40,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Cd_Professor" id="12B02858-A769-997B-5FEE-E257586DD85E">
+<createdBy>rhmur</createdBy>
+<createdTime>2022-03-28 23:03:34 UTC</createdTime>
+<generatorID>79B95B47-6B4F-0931-1632-C832A70FEA64</generatorID>
+<ownerDesignName>BancoDeDadosModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="62E998E5-3AEA-F7AF-E212-D3B59E9CF759" value="true"/>
+</engineerTo>
+<referedAttribute>4F332511-0A82-86CD-4EAE-EDE3EFDD282D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10000</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

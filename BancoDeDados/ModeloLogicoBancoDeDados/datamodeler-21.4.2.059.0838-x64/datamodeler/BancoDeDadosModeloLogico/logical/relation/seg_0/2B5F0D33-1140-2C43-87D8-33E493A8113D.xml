@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ProfessorTurma" directorySegmentName="seg_0" id="2B5F0D33-1140-2C43-87D8-33E493A8113D">
+<createdBy>rhmur</createdBy>
+<createdTime>2022-03-28 23:10:37 UTC</createdTime>
+<ownerDesignName>BancoDeDadosModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="62E998E5-3AEA-F7AF-E212-D3B59E9CF759" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>69E36A4A-105B-C0D5-924D-41A7CB52F8B1</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>94A72CDD-1801-8D2D-0008-F3580477F398</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

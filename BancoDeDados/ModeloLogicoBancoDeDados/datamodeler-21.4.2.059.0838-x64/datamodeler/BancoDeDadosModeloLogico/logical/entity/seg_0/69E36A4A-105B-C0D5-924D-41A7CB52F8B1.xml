@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="69E36A4A-105B-C0D5-924D-41A7CB52F8B1" name="Turma">
+<createdBy>rhmur</createdBy>
+<createdTime>2022-03-28 23:08:01 UTC</createdTime>
+<ownerDesignName>BancoDeDadosModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="62E998E5-3AEA-F7AF-E212-D3B59E9CF759" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Matricula_Aluno" id="49B7D234-2702-6E7D-E834-3A5F74DAAB46">
+<createdBy>rhmur</createdBy>
+<createdTime>2022-03-28 23:08:34 UTC</createdTime>
+<generatorID>4973B30B-6AFE-3347-8120-B0D0DF113B99</generatorID>
+<ownerDesignName>BancoDeDadosModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="62E998E5-3AEA-F7AF-E212-D3B59E9CF759" value="true"/>
+</engineerTo>
+<referedAttribute>B33D3907-9A6D-A696-6C51-3A9ADF515E99</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>100000</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Turma" id="2118D4B6-2695-79A2-F829-8B132E7FC466">
+<createdBy>rhmur</createdBy>
+<createdTime>2022-03-28 23:09:11 UTC</createdTime>
+<ownerDesignName>BancoDeDadosModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="62E998E5-3AEA-F7AF-E212-D3B59E9CF759" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Periodo" id="2AC89110-D57B-ADDB-B6DC-2439F209B9A4">
+<createdBy>rhmur</createdBy>
+<createdTime>2022-03-28 23:09:22 UTC</createdTime>
+<ownerDesignName>BancoDeDadosModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="62E998E5-3AEA-F7AF-E212-D3B59E9CF759" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5F0AF0C6-9BBF-33FA-9FA5-B91182DFAEC1" name="Turma PK">
+<createdBy>rhmur</createdBy>
+<createdTime>2022-03-28 23:08:34 UTC</createdTime>
+<ownerDesignName>BancoDeDadosModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="62E998E5-3AEA-F7AF-E212-D3B59E9CF759" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>49B7D234-2702-6E7D-E834-3A5F74DAAB46</attributeRef>
+<attributeRef>2118D4B6-2695-79A2-F829-8B132E7FC466</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

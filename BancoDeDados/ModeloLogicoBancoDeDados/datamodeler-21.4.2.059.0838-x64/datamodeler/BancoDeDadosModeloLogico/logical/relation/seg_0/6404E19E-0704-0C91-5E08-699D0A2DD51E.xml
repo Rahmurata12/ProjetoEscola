@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="AlunoSerie" directorySegmentName="seg_0" id="6404E19E-0704-0C91-5E08-699D0A2DD51E">
+<createdBy>rhmur</createdBy>
+<createdTime>2022-03-28 23:10:19 UTC</createdTime>
+<ownerDesignName>BancoDeDadosModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="62E998E5-3AEA-F7AF-E212-D3B59E9CF759" value="true"/>
+</engineerTo>
+<sourcePk>A763E5BB-9BD9-722D-7046-F5DB4C6552FE</sourcePk>
+<identifying>true</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>CAF404D7-FC78-C617-DD69-151DA7FB6716</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>361C2848-BB69-1B59-AA71-40194AA91CF6</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

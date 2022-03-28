@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PessoaProfessor" directorySegmentName="seg_0" id="368AABF3-09DC-8622-D8F4-CAB618327FA3">
+<createdBy>rhmur</createdBy>
+<createdTime>2022-03-28 22:59:14 UTC</createdTime>
+<ownerDesignName>BancoDeDadosModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="62E998E5-3AEA-F7AF-E212-D3B59E9CF759" value="true"/>
+</engineerTo>
+<sourcePk>F8D42627-63B3-BF4A-C4D5-76BA48C03B6E</sourcePk>
+<targetPk>EE1A8DEA-7764-09EF-C2EC-697F6C056D28</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>94A72CDD-1801-8D2D-0008-F3580477F398</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>7B7C2DCD-1C9C-8451-0F1D-635CDCE193C4</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="BoletimBimestre" directorySegmentName="seg_0" id="4A297D3A-1D99-06F1-E61E-96E5043B115F">
+<createdBy>rhmur</createdBy>
+<createdTime>2022-03-28 23:06:53 UTC</createdTime>
+<ownerDesignName>BancoDeDadosModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="62E998E5-3AEA-F7AF-E212-D3B59E9CF759" value="true"/>
+</engineerTo>
+<sourcePk>E4B74A00-D090-11FB-A483-9935BAC94FA9</sourcePk>
+<identifying>true</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>851247FD-2278-0D2A-D95F-C023F00D7218</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>0D01A295-BA43-7A32-DA45-545987921881</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
