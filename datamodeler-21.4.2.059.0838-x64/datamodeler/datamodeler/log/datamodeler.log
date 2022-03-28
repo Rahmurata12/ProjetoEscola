@@ -92,3 +92,15 @@ java.io.FileNotFoundException: C:\Users\rhmur\OneDrive\Desktop\ProjetoEscola\Ban
 	at oracle.dbtools.crest.model.metadata.XMLTransformationManager.transformFromXMLToObject(XMLTransformationManager.java:1820)
 	at oracle.dbtools.crest.model.design.Design.openDesign(Design.java:1672)
 	at oracle.dbtools.crest.swingui.ControllerApplication$1.run(ControllerApplication.java:2512)
+2022-03-28 19:34:29 INFORMAÇÕES - Oracle SQL Developer Data Modeler 21.4.2.059.0838
+2022-03-28 19:35:08 GRAVE - Unable to load object from XML: C:\Users\rhmur\Documents\GitHub\ProjetoEscola\datamodeler-21.4.2.059.0838-x64\BancoDeDados\BancoDeDadosModeloLogico\mapping\ExtendedMap.xml
+java.io.FileNotFoundException: C:\Users\rhmur\Documents\GitHub\ProjetoEscola\datamodeler-21.4.2.059.0838-x64\BancoDeDados\BancoDeDadosModeloLogico\mapping\ExtendedMap.xml (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at oracle.dbtools.crest.model.metadata.XMLToObjectTransformer.transformToObject(XMLToObjectTransformer.java:134)
+	at oracle.dbtools.crest.model.metadata.XMLToObjectTransformer.transformToObject(XMLToObjectTransformer.java:129)
+	at oracle.dbtools.crest.model.metadata.XMLTransformationManager.transformFromXMLToObject(XMLTransformationManager.java:1872)
+	at oracle.dbtools.crest.model.metadata.XMLTransformationManager.transformFromXMLToObject(XMLTransformationManager.java:1820)
+	at oracle.dbtools.crest.model.design.Design.openDesign(Design.java:1672)
+	at oracle.dbtools.crest.swingui.ControllerApplication$1.run(ControllerApplication.java:2512)
