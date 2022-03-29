@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0D01A295-BA43-7A32-DA45-545987921881" name="Bimestre">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0D01A295-BA43-7A32-DA45-545987921881" name="MateriaBoletim">
 <createdBy>rhmur</createdBy>
 <createdTime>2022-03-28 23:05:21 UTC</createdTime>
 <ownerDesignName>BancoDeDadosModeloLogico</ownerDesignName>
@@ -68,7 +68,20 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>100000</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,100000,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Bimestre" id="E6D74D6C-86A2-B863-747B-6414ADFE9F1A">
+<createdBy>rhmur</createdBy>
+<createdTime>2022-03-28 23:42:09 UTC</createdTime>
+<ownerDesignName>BancoDeDadosModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="62E998E5-3AEA-F7AF-E212-D3B59E9CF759" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2-</dataTypeSize>
+<ownDataTypeParameters>2-,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

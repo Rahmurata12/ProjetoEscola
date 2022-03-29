@@ -28,7 +28,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>100000</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,100000,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Ano" id="114E044D-8C60-32BF-CD73-095CE79E2C2C">
 <createdBy>rhmur</createdBy>

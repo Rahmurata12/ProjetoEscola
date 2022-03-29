@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A5B9619C-703D-7672-98EA-1031336A9309" name="Diciplina">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="661C2C64-4FAD-E4C3-E69B-32D6B37E9676" name="Nota">
 <createdBy>rhmur</createdBy>
-<createdTime>2022-03-28 23:02:48 UTC</createdTime>
+<createdTime>2022-03-28 23:46:33 UTC</createdTime>
 <ownerDesignName>BancoDeDadosModeloLogico</ownerDesignName>
 <engineerTo>
 <item key="62E998E5-3AEA-F7AF-E212-D3B59E9CF759" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Materia" id="D3B859D0-A5FD-857B-0A83-866ABEBB6FB9">
+<Attribute name="Materia" id="4405BC35-1B8B-16CC-AE47-AF7476D463DD">
 <createdBy>rhmur</createdBy>
-<createdTime>2022-03-28 23:02:57 UTC</createdTime>
+<createdTime>2022-03-28 23:46:37 UTC</createdTime>
 <ownerDesignName>BancoDeDadosModeloLogico</ownerDesignName>
 <engineerTo>
 <item key="62E998E5-3AEA-F7AF-E212-D3B59E9CF759" value="true"/>
@@ -28,38 +28,50 @@
 <dataTypeSize>20</dataTypeSize>
 <ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="QtdeAulas" id="167D3561-D746-39C3-8A90-5DE0D996EE92">
+<Attribute name="Nota" id="ABEFD395-9D8E-51B0-455D-5F518F728C6C">
 <createdBy>rhmur</createdBy>
-<createdTime>2022-03-28 23:03:12 UTC</createdTime>
+<createdTime>2022-03-28 23:46:47 UTC</createdTime>
 <ownerDesignName>BancoDeDadosModeloLogico</ownerDesignName>
 <engineerTo>
 <item key="62E998E5-3AEA-F7AF-E212-D3B59E9CF759" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>40</dataTypePrecision>
-<ownDataTypeParameters>,40,</ownDataTypeParameters>
+<dataTypePrecision>100</dataTypePrecision>
+<dataTypeScale>1</dataTypeScale>
+<ownDataTypeParameters>,100,1</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Cd_Professor" id="12B02858-A769-997B-5FEE-E257586DD85E">
+<Attribute name="DataRegistro" id="E1B1DC40-57CB-C362-5EB2-93C9FA7D66CE">
 <createdBy>rhmur</createdBy>
-<createdTime>2022-03-28 23:03:34 UTC</createdTime>
-<generatorID>79B95B47-6B4F-0931-1632-C832A70FEA64</generatorID>
+<createdTime>2022-03-28 23:47:05 UTC</createdTime>
 <ownerDesignName>BancoDeDadosModeloLogico</ownerDesignName>
 <engineerTo>
 <item key="62E998E5-3AEA-F7AF-E212-D3B59E9CF759" value="true"/>
 </engineerTo>
-<referedAttribute>4F332511-0A82-86CD-4EAE-EDE3EFDD282D</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10000</dataTypePrecision>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Ano" id="4B6CA3F1-1D57-D79A-C80E-348A8BC3BFC7">
+<Attribute name="Matricula_Aluno" id="AEFDD150-0F0F-6741-E880-057CDAC6ECB9">
 <createdBy>rhmur</createdBy>
-<createdTime>2022-03-28 23:55:58 UTC</createdTime>
+<createdTime>2022-03-28 23:47:33 UTC</createdTime>
+<generatorID>8FEAC7D6-2091-DA29-108E-4870F975A676</generatorID>
+<ownerDesignName>BancoDeDadosModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="62E998E5-3AEA-F7AF-E212-D3B59E9CF759" value="true"/>
+</engineerTo>
+<referedAttribute>3E908D64-EDE1-D8F3-98CB-3024DFC67DDC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>100000</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Ano" id="C955AEE4-24B2-FF6F-73D3-2A34359E2260">
+<createdBy>rhmur</createdBy>
+<createdTime>2022-03-28 23:58:10 UTC</createdTime>
 <ownerDesignName>BancoDeDadosModeloLogico</ownerDesignName>
 <engineerTo>
 <item key="62E998E5-3AEA-F7AF-E212-D3B59E9CF759" value="true"/>
@@ -71,16 +83,16 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="8753D473-6C35-522C-02CF-88F2B586E429" name="Diciplina PK">
+<identifier id="52F0352F-3DA5-6822-A4B4-B14C9419F11C" name="Nota PK">
 <createdBy>rhmur</createdBy>
-<createdTime>2022-03-28 23:43:31 UTC</createdTime>
+<createdTime>2022-03-28 23:47:27 UTC</createdTime>
 <ownerDesignName>BancoDeDadosModeloLogico</ownerDesignName>
 <engineerTo>
 <item key="62E998E5-3AEA-F7AF-E212-D3B59E9CF759" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>12B02858-A769-997B-5FEE-E257586DD85E</attributeRef>
+<attributeRef>AEFDD150-0F0F-6741-E880-057CDAC6ECB9</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

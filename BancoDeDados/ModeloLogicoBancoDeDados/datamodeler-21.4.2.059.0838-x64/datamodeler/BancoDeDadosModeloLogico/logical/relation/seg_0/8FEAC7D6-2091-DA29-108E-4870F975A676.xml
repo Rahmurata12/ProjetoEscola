@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="BoletimNota" directorySegmentName="seg_0" id="8FEAC7D6-2091-DA29-108E-4870F975A676">
+<createdBy>rhmur</createdBy>
+<createdTime>2022-03-28 23:47:33 UTC</createdTime>
+<ownerDesignName>BancoDeDadosModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="62E998E5-3AEA-F7AF-E212-D3B59E9CF759" value="true"/>
+</engineerTo>
+<sourcePk>E4B74A00-D090-11FB-A483-9935BAC94FA9</sourcePk>
+<identifying>true</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>851247FD-2278-0D2A-D95F-C023F00D7218</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>661C2C64-4FAD-E4C3-E69B-32D6B37E9676</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
