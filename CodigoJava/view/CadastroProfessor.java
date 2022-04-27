@@ -15,7 +15,7 @@ import javax.swing.JTextField;
 import model.bean.Pessoa;
 import model.bean.Professor;
 import model.dao.AlunoDAO;
-import model.dao.PessoaDAO;
+import model.dao.ProfessorDAO;
 
 public class CadastroProfessor extends JFrame {
 
@@ -78,16 +78,16 @@ public class CadastroProfessor extends JFrame {
 		BtnSalvar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				Pessoa ps = new Pessoa();
+				Professor prof = new Professor();
 				
-				PessoaDAO psDao = new PessoaDAO();
+				ProfessorDAO profDao = new ProfessorDAO();
 				
-				ps.setNome(NomeTxt.getText());
-				ps.setDt_Nascimento(DataNascimentoTxt.getText());
-				ps.setRG(RGTxt.getText());
-				ps.setCPF(CPFTxt.getText());
+				prof.setNome(NomeTxt.getText());
+				prof.setDt_Nascimento(DataNascimentoTxt.getText());
+				prof.setRG(RGTxt.getText());
+				prof.setCPF(CPFTxt.getText());
 				
-				psDao.create(ps);
+				profDao.create(prof);
 			}
 		});
 

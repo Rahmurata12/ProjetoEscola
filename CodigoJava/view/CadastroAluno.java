@@ -21,7 +21,7 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 import model.bean.Aluno;
 import model.bean.Pessoa;
 import model.dao.AlunoDAO;
-import model.dao.PessoaDAO;
+import model.dao.ProfessorDAO;
 
 public class CadastroAluno extends JFrame {
 
@@ -69,7 +69,6 @@ public class CadastroAluno extends JFrame {
 	public CadastroAluno() {
 		
 		Aluno Aluno = new Aluno();
-		Pessoa ps = new Pessoa();
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -105,20 +104,18 @@ public class CadastroAluno extends JFrame {
 		BtnSalvar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				PessoaDAO psDao = new PessoaDAO();
 				AlunoDAO alDao = new AlunoDAO();
 				
-				ps.setNome(NomeTxt.getText());
-				ps.setDt_Nascimento(DataNascimentoTxt.getText());
-				ps.setRG(RGTxt.getText());
-				ps.setCPF(CPFTxt.getText());
+				Aluno.setNome(NomeTxt.getText());
+				Aluno.setDt_Nascimento(DataNascimentoTxt.getText());
+				Aluno.setRG(RGTxt.getText());
+				Aluno.setCPF(CPFTxt.getText());
 				Aluno.setNomeMae(NomeMaeTxt.getText());
 				Aluno.setNomePai(NomePaiTxt.getText());
 				Aluno.setCep(CEPTxt.getText());
 				Aluno.setEndereco(EnderecoTxt.getText());
 				Aluno.setComplemento(CompTxt.getText());
-				
-				psDao.create(ps);
+			
 				alDao.create(Aluno);
 			}
 		});
@@ -185,14 +182,24 @@ public class CadastroAluno extends JFrame {
 		panel_1.add(lblNewLabel_2);
 		
 		JButton BtnConverter = new JButton("Salvar arquivo");
+		
+		
 		BtnConverter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+			
+				System.out.println(Aluno.getNome());
+				System.out.println(Aluno.getDt_Nascimento());
+				System.out.println(Aluno.getRG());
+				System.out.println(Aluno.getCPF());
 				System.out.println(Aluno.getNomeMae());
-				Aluno.getNomePai();
-				Aluno.getCep();
-				Aluno.getEndereco();
-				Aluno.getComplemento();
+				System.out.println(Aluno.getNomePai());
+				System.out.println(Aluno.getCep());
+				System.out.println(Aluno.getEndereco());
+				System.out.println(Aluno.getComplemento());
 				
+				
+				
+				/*
 				XStream xstream = new XStream(new DomDriver());
 				System.out.println(xstream.toXML(Aluno));
 				
@@ -208,7 +215,7 @@ public class CadastroAluno extends JFrame {
 					JOptionPane.showMessageDialog(null, "Arquivo Gerado com Sucesso!");
 				}
 				
-				writer.close();
+				writer.close(); */
 			}
 		});
 		BtnConverter.setBounds(413, 441, 137, 50);
