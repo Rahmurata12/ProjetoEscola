@@ -7,24 +7,26 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 import connection.ConnectionDB;
-import model.bean.Telefone;
+import model.bean.Professor;
 
-public class TelefoneDAO {
-
-	public void create(Telefone tel) {
-
+public class ProfessorDAO {
+	
+	
+public void create(Professor prof) {
+		
 		Connection con = ConnectionDB.getConnection();
 		PreparedStatement stmt = null;
-
+		
 		try {
-
-			stmt = con.prepareStatement(
-					"INSERT INTO sistemagestaoescola.pessoa (tipo_Tel,numero) VALUES(?,?)");
-			stmt.setString(1, tel.getTipo_Tel());
-			stmt.setString(2, tel.getNumero());
-
+			
+			stmt = con.prepareStatement("INSERT INTO sistemagestaoescola.pessoa (nome,dt_Nascimento,RG,CPF) VALUES(?,?,?,?)");
+			stmt.setString(1, prof.getNome());
+			stmt.setString(2, prof.getDt_Nascimento());
+			stmt.setString(3, prof.getRG());
+			stmt.setString(4, prof.getCPF());
+			
 			stmt.executeUpdate();
-
+			
 			JOptionPane.showMessageDialog(null, "Salvo!");
 		} catch (SQLException e) {
 			JOptionPane.showMessageDialog(null, "Erro!" + e);
@@ -33,5 +35,4 @@ public class TelefoneDAO {
 			ConnectionDB.closeConnection(con, stmt);
 		}
 	}
-
 }
