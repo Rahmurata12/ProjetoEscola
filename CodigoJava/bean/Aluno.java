@@ -1,7 +1,20 @@
 package model.bean;
 
-public class Aluno {
+public class Aluno extends Pessoa{
 
+
+	public Aluno(String nomeMae, String nomePai, String cep, String endereco, String complemento) {
+		super();
+		this.nomeMae = nomeMae;
+		this.nomePai = nomePai;
+		this.cep = cep;
+		this.endereco = endereco;
+		this.complemento = complemento;
+	}
+	
+	public Aluno() {
+		// TODO Auto-generated constructor stub
+	}
 
 	private String nomeMae;
 	private String nomePai;

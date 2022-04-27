@@ -7,12 +7,25 @@ public class Pessoa {
 	private String RG;
 	private String CPF;
 	
+	public Pessoa(String nome, String dt_Nascimento, String rG, String cPF) {
+		super();
+		this.nome = nome;
+		this.dt_Nascimento = dt_Nascimento;
+		RG = rG;
+		CPF = cPF;
+	}
+
+	public Pessoa() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getNome() {
 		return nome;
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
 	public String getDt_Nascimento() {
 		return dt_Nascimento;
 	}
