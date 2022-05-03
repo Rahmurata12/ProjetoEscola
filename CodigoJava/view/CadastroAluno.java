@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.text.ParseException;
+import java.util.ArrayList;
 
 import javax.swing.Box;
 import javax.swing.JButton;
@@ -20,14 +21,12 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.text.MaskFormatter;
 
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.xml.DomDriver;
+//import com.thoughtworks.xstream.XStream;
+//import com.thoughtworks.xstream.io.xml.DomDriver;
 
 import model.bean.Aluno;
-import model.bean.Pessoa;
 import model.bean.Telefone;
 import model.dao.AlunoDAO;
-import model.dao.ProfessorDAO;
 import model.dao.TelefoneDAO;
 import javax.swing.JFormattedTextField;
 import javax.swing.JTable;
@@ -68,7 +67,8 @@ public class CadastroAluno extends JFrame {
 	private final JLabel lblCom = new JLabel("Endere\u00E7o: ");
 	private JTextField EnderecoTxt;
 	private final JTextField CompTxt = new JTextField();
-	private JTable listaTelefonica;
+	private JTable listaTelefonicaTbl = new JTable();
+	private final JScrollPane scrollPane = new JScrollPane();
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -150,8 +150,8 @@ public class CadastroAluno extends JFrame {
 			}
 		});
 
-		BtnSalvar.setBounds(374, 380, 100, 50);
-		BtnFechar.setBounds(484, 380, 100, 50);
+		BtnSalvar.setBounds(50, 472, 100, 50);
+		BtnFechar.setBounds(320, 472, 100, 50);
 		BtnFechar.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
@@ -200,17 +200,18 @@ public class CadastroAluno extends JFrame {
 		lblNewLabel_1.setBounds(52, 11, 44, 14);
 		panel.add(lblNewLabel_1);
 
-		JPanel panel_1 = new JPanel();
-		panel_1.setBackground(Color.GRAY);
-		panel_1.setBounds(400, 242, 265, 115);
-		getContentPane().add(panel_1);
-		panel_1.setLayout(null);
+		JPanel ListaTelefonica = new JPanel();
+		ListaTelefonica.setBackground(Color.WHITE);
+		ListaTelefonica.setBounds(398, 242, 301, 148);
+		getContentPane().add(ListaTelefonica);
+		ListaTelefonica.setLayout(null);
 
 		JLabel lblNewLabel_2 = new JLabel("Lista Telefonica");
 		lblNewLabel_2.setBounds(38, 5, 93, 14);
-		panel_1.add(lblNewLabel_2);
+		ListaTelefonica.add(lblNewLabel_2);
 
 		JButton btnNovoTel = new JButton("Novo");
+		btnNovoTel.setBounds(223, 107, 68, 23);
 		btnNovoTel.addActionListener(new ActionListener() {
 			private JFormattedTextField numeroTel;
 
@@ -236,23 +237,31 @@ public class CadastroAluno extends JFrame {
 				if (result == JOptionPane.OK_OPTION) {
 					tel.setTipoTel((String) tipoTel.getSelectedItem());
 					tel.setNumero(numeroTel.getText());
+					dao.create(tel);
 				}
-
-				dao.create(tel);
 			}
 		});
-		btnNovoTel.setBounds(178, 92, 68, 23);
-		panel_1.add(btnNovoTel);
+		
+		
+		String[] colunas = {"ID", "Tipo", "Número" };
 
-		String[] colunas = { "Tipo", "Número" };
-
-		Object[][] numero = { {"Tipo", "Número"} };
-		listaTelefonica = new JTable(numero, colunas);
-		listaTelefonica.setBounds(10, 42, 140, 62);
-		panel_1.add(listaTelefonica);
-
+		ArrayList<Telefone> telLista = new ArrayList<Telefone>();
+		telLista.add(new Telefone(1, "Residencial", "123"));
+		Telefone[][] telVetor = new Telefone[8][3];
+		
+		
 		JButton BtnConverter = new JButton("Salvar arquivo");
-
+		
+		ListaTelefonica.add(btnNovoTel);
+		scrollPane.setBounds(21, 30, 192, 100);
+		
+		ListaTelefonica.add(scrollPane);
+		listaTelefonicaTbl = new JTable(telVetor,colunas);
+		listaTelefonicaTbl.setBackground(Color.LIGHT_GRAY);
+		listaTelefonicaTbl.setEnabled(false);
+		scrollPane.setViewportView(listaTelefonicaTbl);
+		
+		/*
 		BtnConverter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
@@ -283,8 +292,8 @@ public class CadastroAluno extends JFrame {
 
 				writer.close();
 			}
-		});
-		BtnConverter.setBounds(413, 441, 137, 50);
+		});*/
+		BtnConverter.setBounds(163, 472, 137, 50);
 		getContentPane().add(BtnConverter);
 		RG.setBounds(87, 157, 100, 20);
 
