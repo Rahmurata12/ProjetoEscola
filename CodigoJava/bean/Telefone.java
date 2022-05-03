@@ -2,21 +2,33 @@ package model.bean;
 
 public class Telefone {
 	
-	private String Tipo_Tel;
-	private String Numero;
+	private String tipoTel;
+	private String numero;
 	
-	public String getTipo_Tel() {
-		return Tipo_Tel;
+	public String getTipoTel() {
+		return tipoTel;
 	}
-	public void setTipo_Tel(String tipo_Tel) {
-		Tipo_Tel = tipo_Tel;
+
+	public void setTipoTel(String tipoTel) {
+		this.tipoTel = tipoTel;
 	}
+
 	public String getNumero() {
-		return Numero;
+		return numero;
 	}
+
 	public void setNumero(String numero) {
-		Numero = numero;
+		this.numero = numero;
 	}
-	
+
+	public Telefone(String tipoTel, String numero) {
+		super();
+		this.tipoTel = tipoTel;
+		this.numero = numero;
+	}
+
+	public Telefone() {
+		// TODO Auto-generated constructor stub
+	}
 	
 }
