@@ -40,7 +40,6 @@ public class TelefoneDAO {
 	public ArrayList<Telefone> listar() {
 
 		ArrayList<Telefone> tel = new ArrayList<>();
-		String read = "SELECT * FROM aulas.materias_professores";
 
 		try {
 			Connection con = ConnectionDB.getConnection();
@@ -50,10 +49,11 @@ public class TelefoneDAO {
 			ResultSet rs = stmt.executeQuery();
 
 			while (rs.next()) {
+				int id = rs.getInt(1);
 				String tipoTel = rs.getString(2);
 				String numero = rs.getString(3);
 
-				tel.add(new Telefone(tipoTel, numero));
+				tel.add(new Telefone(id, tipoTel, numero));
 			}
 			con.close();
 			return tel;
@@ -63,5 +63,26 @@ public class TelefoneDAO {
 		}
 	}
 	
+	public void delete(int id) {
 
+		Connection con = ConnectionDB.getConnection();
+		PreparedStatement stmt = null;
+
+		try {
+
+			stmt = con.prepareStatement(
+					"DELETE FROM sistemagestaoescola.telefone WHERE id = ?");
+			stmt.setInt(1, id);
+
+			stmt.executeUpdate();
+
+			JOptionPane.showMessageDialog(null, "Excluido!");
+		} catch (SQLException e) {
+			JOptionPane.showMessageDialog(null, "Erro!" + e);
+			e.printStackTrace();
+		} finally {
+			ConnectionDB.closeConnection(con, stmt);
+		}
+	}
+	
 }
