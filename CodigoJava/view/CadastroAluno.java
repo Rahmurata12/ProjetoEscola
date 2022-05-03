@@ -16,11 +16,12 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.text.MaskFormatter;
 
-//import com.thoughtworks.xstream.XStream;
-//import com.thoughtworks.xstream.io.xml.DomDriver;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
 
 import model.bean.Aluno;
 import model.bean.Pessoa;
@@ -29,16 +30,17 @@ import model.dao.AlunoDAO;
 import model.dao.ProfessorDAO;
 import model.dao.TelefoneDAO;
 import javax.swing.JFormattedTextField;
+import javax.swing.JTable;
 
 public class CadastroAluno extends JFrame {
-	
-	//FormatedText
+
+	// FormatedText
 	private MaskFormatter ftmData;
 	private MaskFormatter ftmRG;
 	private MaskFormatter ftmCPF;
 	private MaskFormatter ftmNumTel;
 	private MaskFormatter ftmCEP;
-	
+
 	private JTextField dtNasc;
 	private JTextField RG;
 	private JTextField CPF;
@@ -66,6 +68,7 @@ public class CadastroAluno extends JFrame {
 	private final JLabel lblCom = new JLabel("Endere\u00E7o: ");
 	private JTextField EnderecoTxt;
 	private final JTextField CompTxt = new JTextField();
+	private JTable listaTelefonica;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -81,19 +84,19 @@ public class CadastroAluno extends JFrame {
 	}
 
 	public CadastroAluno() {
-		
+
 		Aluno al = new Aluno();
-		
+
 		try {
 			ftmData = new MaskFormatter("##/##/####");
-			ftmRG = new MaskFormatter("##.###.###-#");
-			ftmCPF = new MaskFormatter("###.###.###-##");
-			ftmNumTel = new MaskFormatter("55-##-#####-####");
-			ftmCEP = new MaskFormatter("#####-###");
+			ftmRG = new MaskFormatter("#########");
+			ftmCPF = new MaskFormatter("###########");
+			ftmNumTel = new MaskFormatter("55###########");
+			ftmCEP = new MaskFormatter("########");
 		} catch (ParseException e2) {
 			e2.printStackTrace();
 		}
-		
+
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		setSize(750, 600);
@@ -106,7 +109,7 @@ public class CadastroAluno extends JFrame {
 		CPFLabel.setBounds(50, 201, 34, 15);
 
 		NomeTxt.setBounds(96, 80, 150, 15);
-		
+
 		dtNasc = new JFormattedTextField(ftmData);
 		RG = new JFormattedTextField(ftmRG);
 		CPF = new JFormattedTextField(ftmCPF);
@@ -130,9 +133,9 @@ public class CadastroAluno extends JFrame {
 		getContentPane().add(NomePaiTxt);
 		BtnSalvar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+
 				AlunoDAO dao = new AlunoDAO();
-				
+
 				al.setNome(NomeTxt.getText());
 				al.setDt_Nascimento(dtNasc.getText());
 				al.setRG(RG.getText());
@@ -142,7 +145,7 @@ public class CadastroAluno extends JFrame {
 				al.setCep(CEP.getText());
 				al.setEndereco(EnderecoTxt.getText());
 				al.setComplemento(CompTxt.getText());
-			
+
 				dao.create(al);
 			}
 		});
@@ -199,54 +202,60 @@ public class CadastroAluno extends JFrame {
 
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(Color.GRAY);
-		panel_1.setBounds(400, 242, 184, 115);
+		panel_1.setBounds(400, 242, 265, 115);
 		getContentPane().add(panel_1);
 		panel_1.setLayout(null);
 
 		JLabel lblNewLabel_2 = new JLabel("Lista Telefonica");
 		lblNewLabel_2.setBounds(38, 5, 93, 14);
 		panel_1.add(lblNewLabel_2);
-		
+
 		JButton btnNovoTel = new JButton("Novo");
 		btnNovoTel.addActionListener(new ActionListener() {
 			private JFormattedTextField numeroTel;
 
 			public void actionPerformed(ActionEvent e) {
-				
+
 				Telefone tel = new Telefone();
 				TelefoneDAO dao = new TelefoneDAO();
-				String[] tipos = { "Residencial", "Pessoal", "Trabalho", "Outros"};
-				
+				String[] tipos = { "Residencial", "Pessoal", "Trabalho", "Outros" };
+
 				numeroTel = new JFormattedTextField(ftmNumTel);
 				@SuppressWarnings({ "rawtypes", "unchecked" })
 				JComboBox tipoTel = new JComboBox(tipos);
-			    
-			    JPanel cttPanel = new JPanel();
-			    cttPanel.add(new JLabel("Tipo: "));
-			    cttPanel.add(tipoTel);
-			    cttPanel.add(Box.createHorizontalStrut(20)); 
-			    cttPanel.add(new JLabel("Numero: "));
-			    cttPanel.add(numeroTel);
-			    
-			    int result = JOptionPane.showConfirmDialog(null, cttPanel,
-			        "Novo Telefone", JOptionPane.OK_CANCEL_OPTION);
-			    if (result == JOptionPane.OK_OPTION) {
-			    	tel.setTipo_Tel((String) tipoTel.getSelectedItem());
-			    	tel.setNumero(numeroTel.getText());
-			    }
-			    
-			    dao.create(tel);
+
+				JPanel cttPanel = new JPanel();
+				cttPanel.add(new JLabel("Tipo: "));
+				cttPanel.add(tipoTel);
+				cttPanel.add(Box.createHorizontalStrut(20));
+				cttPanel.add(new JLabel("Numero: "));
+				cttPanel.add(numeroTel);
+
+				int result = JOptionPane.showConfirmDialog(null, cttPanel, "Novo Telefone",
+						JOptionPane.OK_CANCEL_OPTION);
+				if (result == JOptionPane.OK_OPTION) {
+					tel.setTipoTel((String) tipoTel.getSelectedItem());
+					tel.setNumero(numeroTel.getText());
+				}
+
+				dao.create(tel);
 			}
 		});
-		btnNovoTel.setBounds(106, 92, 68, 23);
+		btnNovoTel.setBounds(178, 92, 68, 23);
 		panel_1.add(btnNovoTel);
-		
+
+		String[] colunas = { "Tipo", "Número" };
+
+		Object[][] numero = { {"Tipo", "Número"} };
+		listaTelefonica = new JTable(numero, colunas);
+		listaTelefonica.setBounds(10, 42, 140, 62);
+		panel_1.add(listaTelefonica);
+
 		JButton BtnConverter = new JButton("Salvar arquivo");
-		
-		
+
 		BtnConverter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			
+
 				System.out.println(al.getNome());
 				System.out.println(al.getDt_Nascimento());
 				System.out.println(al.getRG());
@@ -256,15 +265,12 @@ public class CadastroAluno extends JFrame {
 				System.out.println(al.getCep());
 				System.out.println(al.getEndereco());
 				System.out.println(al.getComplemento());
-				
-				
-				
-				/*
+
 				XStream xstream = new XStream(new DomDriver());
 				System.out.println(xstream.toXML(al));
-				
+
 				PrintWriter writer = null;
-				
+
 				try {
 					writer = new PrintWriter(NomeTxt.getText());
 					writer.print(xstream.toXML(al));
@@ -274,18 +280,18 @@ public class CadastroAluno extends JFrame {
 				} finally {
 					JOptionPane.showMessageDialog(null, "Arquivo Gerado com Sucesso!");
 				}
-				
-				writer.close(); */
+
+				writer.close();
 			}
 		});
 		BtnConverter.setBounds(413, 441, 137, 50);
 		getContentPane().add(BtnConverter);
 		RG.setBounds(87, 157, 100, 20);
-		
+
 		getContentPane().add(RG);
 		CPF.setBounds(87, 198, 100, 20);
-		
+
 		getContentPane().add(CPF);
-		
+
 	}
 }
