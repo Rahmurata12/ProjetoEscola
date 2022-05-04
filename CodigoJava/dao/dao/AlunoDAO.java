@@ -9,7 +9,7 @@ import java.sql.SQLException;
 
 import javax.swing.JOptionPane;
 
-public class AlunoDAO extends PessoaDAO{
+public class AlunoDAO{
 
 	public void create(Aluno al) {
 
