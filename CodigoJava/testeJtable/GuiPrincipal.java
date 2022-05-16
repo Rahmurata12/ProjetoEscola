@@ -11,8 +11,6 @@ import javax.swing.JTable;
 public class GuiPrincipal extends JFrame{
 	private JTable table;
     private final String colunas[]={"Nome","Idade","Sexo"};
-    
-    private final String dados[][]= new String[2][3];
    
         /*Construtor da classe ,
           antes de executar o metodo main(),
@@ -24,13 +22,19 @@ public class GuiPrincipal extends JFrame{
         setTitle("Exemplo JTable");//titulo
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//setando a ação padrão de fechamento do Formulário,
                                                           // neste caso  irá fechar o programa
-        ArrayList<bean> Pessoas = new ArrayList();
+        ArrayList<bean> Pessoas = new ArrayList<bean>();
         bean Rafael = new bean("Rafael", "12", "Masc");
         bean Marcelo = new bean("Marcelo", "12", "mas");
         Pessoas.add(Rafael);
-        dados[0][0] = Pessoas.get(0).getNome();
-        dados[0][1] = Rafael.getIdade();
-        dados[0][2] = Rafael.getSexo();
+        Pessoas.add(Marcelo);
+        
+        String dados[][]= new String[Pessoas.size()][3];
+        
+        for (int i = 0; i < Pessoas.size(); i++) {
+        	dados[i][0] = Pessoas.get(i).getNome();
+            dados[i][1] = Pessoas.get(i).getIdade();
+            dados[i][2] = Pessoas.get(i).getSexo();
+		}
         
                 //instanciando a JTable
         table=new JTable(dados,colunas);
